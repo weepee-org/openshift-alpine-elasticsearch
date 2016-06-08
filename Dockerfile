@@ -19,7 +19,8 @@ rm -f /var/cache/apk/*
 
 ADD ./cfg/elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 ADD ./scripts/start.sh /scripts/start.sh
-RUN chmod -R a+rx /scripts
+RUN chmod -R a+rx /scripts && RUN chmod -R a+rwx /var/lib /opt && rm -fr /var/lib/elasticsearch
+
 
 VOLUME ["/var/lib/elasticsearch"]
 
