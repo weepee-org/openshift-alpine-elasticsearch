@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # uses es home to load all configs.
 # adding a "commandopts" to the volume allows you to pass more options to elasticsearch
