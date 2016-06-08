@@ -5,6 +5,7 @@ ENV ELASTICSEARCH_VERSION 1.5.2
 
 RUN \
 apk update && apk add tzdata bash tar rsync ca-certificates curl openjdk wget \
+apk upgrade && \
 cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime && \
 echo "Europe/Brussels" >  /etc/timezone && \
 mkdir -p /opt && \
