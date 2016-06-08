@@ -13,7 +13,7 @@ cd /tmp && \
 curl https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-$ELASTICSEARCH_VERSION.tar.gz > elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
 tar -xzf elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
 rm -rf elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
-mv elasticsearch-$ELASTICSEARCH_VERSION /opt/elasticsearch \
+mv elasticsearch-$ELASTICSEARCH_VERSION /opt/elasticsearch && \
 rm -fr /tmp/* && \
 rm -f /var/cache/apk/*
 
