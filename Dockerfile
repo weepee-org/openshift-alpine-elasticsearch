@@ -18,6 +18,7 @@ RUN \
 
 ADD ./cfg/elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 ADD ./scripts/start.sh /scripts/start.sh
+RUN chmod -R a+rx /scripts
 
 VOLUME ["/var/lib/elasticsearch"]
 
