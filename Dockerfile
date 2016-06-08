@@ -22,8 +22,6 @@ ADD ./scripts/start.sh /scripts/start.sh
 RUN chmod -R a+rx /scripts && RUN chmod -R a+rwx /var/lib /opt && rm -fr /var/lib/elasticsearch
 
 
-VOLUME ["/var/lib/elasticsearch"]
-
 EXPOSE 9200
 EXPOSE 9300
 
