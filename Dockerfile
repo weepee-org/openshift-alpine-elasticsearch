@@ -2,8 +2,9 @@ FROM alpine:3.4
 MAINTAINER Toon Van Dooren <toon@weepee.org>
 
 ENV ELASTICSEARCH_VERSION 1.5.2
+ENV JAVA_VERSION 7.55.2.4.7-r0
 
-RUN apk update && apk add tzdata bash tar rsync ca-certificates curl openjdk wget && \
+RUN apk update && apk add tzdata bash tar rsync ca-certificates curl openjdk7-jre-base=$JAVA_VERSION wget && \
 apk upgrade && \
 cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime && \
 echo "Europe/Brussels" > /etc/timezone && \
