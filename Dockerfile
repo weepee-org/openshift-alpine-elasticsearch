@@ -7,7 +7,7 @@ RUN \
 apk update && apk add tzdata bash tar rsync ca-certificates curl openjdk wget \
 apk upgrade && \
 cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime && \
-echo "Europe/Brussels" >  /etc/timezone && \
+echo "Europe/Brussels" > /etc/timezone && \
 mkdir -p /opt && \
 cd /tmp && \
 curl https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-$ELASTICSEARCH_VERSION.tar.gz > elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
