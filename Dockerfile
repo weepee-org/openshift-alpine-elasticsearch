@@ -15,7 +15,8 @@ tar -xzf elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
 rm -rf elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
 mv elasticsearch-$ELASTICSEARCH_VERSION /opt/elasticsearch && \
 rm -fr /tmp/* && \
-rm -f /var/cache/apk/*
+rm -f /var/cache/apk/* && \
+mkdir -p /var/lib/elasticsearch
 
 ADD ./cfg/elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 ADD ./scripts/start.sh /scripts/start.sh
