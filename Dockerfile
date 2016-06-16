@@ -22,7 +22,8 @@ ADD ./cfg/elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 ADD ./scripts/start.sh /scripts/start.sh
 
 RUN chmod -R a+rx /scripts && \
-chmod -R a+rx /opt/elasticsearch && \
+chmod -R a+rwx /opt/ && \
+chmod -R a+rwx /var/lib && rm -fr /var/lib/elasticsearch
 
 EXPOSE 9200
 EXPOSE 9300
