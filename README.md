@@ -1,3 +1,3 @@
 # openshift-alpine-elasticsearch
 
-First attempt on ES on Openshift
+A 100 MB ES container
