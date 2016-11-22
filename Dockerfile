@@ -4,7 +4,7 @@ MAINTAINER Toon Van Dooren <toon@weepee.org>
 ENV JAVA_VERSION 8.92.14-r1
 ENV ELASTICSEARCH_VERSION 1.5.2
 
-RUN apk update && apk add tzdata bash tar rsync ca-certificates curl openjdk8-jre-base=$JAVA_VERSION wget && \
+RUN apk update && apk add tzdata bash tar rsync ca-certificates curl openjdk8-jre-base wget && \
 apk upgrade && \
 cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime && \
 echo "Europe/Brussels" > /etc/timezone && \
