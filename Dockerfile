@@ -23,12 +23,11 @@ ADD ./scripts/start.sh /scripts/start.sh
 
 RUN chmod -R a+rx /scripts && \
 chmod -R a+rwx /opt/ && \
-chmod -R a+rwx /var/lib && rm -fr /var/lib/elasticsearch
+chmod -R a+rwx /var/lib && rm -fr /var/lib/elasticsearch && \
+/opt/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/2.5.0 && \
+/opt/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-phonetic/2.5.0
 
 EXPOSE 9200
 EXPOSE 9300
 
 CMD ["/scripts/start.sh"]
-
-RUN /opt/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-icu/2.5.0 && \
-/opt/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-analysis-phonetic/2.5.0
